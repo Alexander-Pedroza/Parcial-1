@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <!-- META: configuración de charset y responsive -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portafolio - Ingeniero de Sistemas</title>
+
+  <!-- CDN: Tailwind CSS v3 -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- CDN: FontAwesome v6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pc6E6Xx1YqKqvZ+g5Qk1g6r5h3QZ8V4Yx6p1h2Z9s7Q8l3W9y2K1s0H6b5N4T2M1J3G4H5F6E7D8C9B0A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+<body class="antialiased text-slate-800 bg-gray-50">
+
+  <!-- INICIO NAVBAR -->
+  <header class="sticky top-0 z-50 bg-white/70 backdrop-blur-md shadow">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <!-- Logo: AP (Alexander Pedroza) -->
+        <a href="index.html" class="flex items-center space-x-3">
+          <div class="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold">AP</div>
+          <div class="text-sm">
+            <div class="text-slate-900 font-bold">Alexander Pedroza</div>
+            <div class="text-xs text-slate-500">Ingeniero de Sistemas</div>
+          </div>
+        </a>
+
+        <!-- Botón hamburguesa para móviles -->
+        <div class="lg:hidden">
+          <button id="nav-toggle" aria-label="Abrir menú" class="p-2 rounded-md focus:outline-none focus:ring">
+            <i class="fa-solid fa-bars text-xl"></i>
+          </button>
+        </div>
+
+        <!-- Enlaces de navegación (esconde en móviles) -->
+        <nav id="nav-menu" class="hidden lg:flex lg:items-center lg:space-x-6">
+          <a href="index.html" class="text-slate-700 hover:text-blue-600">Inicio</a>
+          <a href="servicios.html" class="text-slate-700 hover:text-blue-600">Servicios</a>
+          <a href="portafolio.html" class="text-slate-700 hover:text-blue-600">Portafolio</a>
+          <a href="contacto.html" class="text-slate-700 hover:text-blue-600">Contacto</a>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Menu desplegable móvil -->
+    <div id="mobile-menu" class="lg:hidden hidden px-4 pb-4">
+      <a href="index.html" class="block py-2 text-slate-700">Inicio</a>
+      <a href="servicios.html" class="block py-2 text-slate-700">Servicios</a>
+      <a href="portafolio.html" class="block py-2 text-slate-700">Portafolio</a>
+      <a href="contacto.html" class="block py-2 text-slate-700">Contacto</a>
+    </div>
+  </header>
+  <!-- FIN NAVBAR -->
+
+  <!-- SECCIÓN PORTAFOLIO: Grid moderno de proyectos -->
+  <main class="py-16">
+    <div class="max-w-7xl mx-auto px-4">
+      <header class="text-center mb-12">
+        <h2 class="text-3xl font-extrabold">Proyectos</h2>
+        <div class="mt-3 mx-auto w-24 h-1 bg-blue-600 rounded"></div>
+        <p class="mt-4 text-slate-600">Selección de proyectos destacados con tecnologías usadas y descripciones breves.</p>
+      </header>
+
+      <!-- Grid de tarjetas de proyecto -->
+      <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Proyecto 1 -->
+        <article class="bg-white rounded-lg shadow overflow-hidden transform transition-all duration-300 hover:-translate-y-2">
+          <img data-name="Gestor de Inventarios" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="Gestor de Inventarios" class="w-full h-44 object-cover" loading="lazy" decoding="async" style="max-height:11rem;object-fit:cover;">
+          <div class="p-6">
+            <div class="flex items-center justify-between">
+              <h3 class="font-semibold">Gestor de Inventarios</h3>
+              <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full">SQL</span>
+            </div>
+            <p class="mt-3 text-sm text-slate-600">Aplicación para gestionar inventario con reportes y consultas optimizadas en PostgreSQL.</p>
+          </div>
+        </article>
+
+        <!-- Proyecto 2 -->
+        <article class="bg-white rounded-lg shadow overflow-hidden transform transition-all duration-300 hover:-translate-y-2">
+          <img data-name="Landing Corporativa" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="Landing Corporativa" class="w-full h-44 object-cover" loading="lazy" decoding="async" style="max-height:11rem;object-fit:cover;">
+          <div class="p-6">
+            <div class="flex items-center justify-between">
+              <h3 class="font-semibold">Landing Corporativa</h3>
+              <span class="text-xs bg-orange-100 text-orange-800 px-2 py-1 rounded-full">HTML</span>
+            </div>
+            <p class="mt-3 text-sm text-slate-600">Landing responsiva y optimizada para conversión, con foco en accesibilidad y rendimiento.</p>
+          </div>
+        </article>
+
+        <!-- Proyecto 3 -->
+        <article class="bg-white rounded-lg shadow overflow-hidden transform transition-all duration-300 hover:-translate-y-2">
+          <img data-name="API de Autenticación" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="API de Autenticación" class="w-full h-44 object-cover" loading="lazy" decoding="async" style="max-height:11rem;object-fit:cover;">
+          <div class="p-6">
+            <div class="flex items-center justify-between">
+              <h3 class="font-semibold">API de Autenticación</h3>
+              <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">Node.js</span>
+            </div>
+            <p class="mt-3 text-sm text-slate-600">API segura con JWT, rol-based access control y pruebas de integración.</p>
+          </div>
+        </article>
+
+        <!-- Proyecto 4 -->
+        <article class="bg-white rounded-lg shadow overflow-hidden transform transition-all duration-300 hover:-translate-y-2">
+          <img data-name="Dashboard Analítico" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="Dashboard Analítico" class="w-full h-44 object-cover" loading="lazy" decoding="async" style="max-height:11rem;object-fit:cover;">
+          <div class="p-6">
+            <div class="flex items-center justify-between">
+              <h3 class="font-semibold">Dashboard Analítico</h3>
+              <span class="text-xs bg-indigo-100 text-indigo-800 px-2 py-1 rounded-full">React</span>
+            </div>
+            <p class="mt-3 text-sm text-slate-600">Dashboard interactivo con visualizaciones y filtros para análisis de datos en tiempo real.</p>
+          </div>
+        </article>
+
+        <!-- Proyecto 5 -->
+        <article class="bg-white rounded-lg shadow overflow-hidden transform transition-all duration-300 hover:-translate-y-2">
+          <img data-name="E-commerce Minimal" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="E-commerce Minimal" class="w-full h-44 object-cover" loading="lazy" decoding="async" style="max-height:11rem;object-fit:cover;">
+          <div class="p-6">
+            <div class="flex items-center justify-between">
+              <h3 class="font-semibold">E-commerce Minimal</h3>
+              <span class="text-xs bg-red-100 text-red-800 px-2 py-1 rounded-full">Shopify</span>
+            </div>
+            <p class="mt-3 text-sm text-slate-600">Tienda en línea con integración de pagos y optimización para conversiones.</p>
+          </div>
+        </article>
+
+        <!-- Proyecto 6 -->
+        <article class="bg-white rounded-lg shadow overflow-hidden transform transition-all duration-300 hover:-translate-y-2">
+          <img data-name="Automatización de Tareas" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="Automatización de Tareas" class="w-full h-44 object-cover" loading="lazy" decoding="async" style="max-height:11rem;object-fit:cover;">
+          <div class="p-6">
+            <div class="flex items-center justify-between">
+              <h3 class="font-semibold">Automatización de Tareas</h3>
+              <span class="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded-full">Python</span>
+            </div>
+            <p class="mt-3 text-sm text-slate-600">Scripts y microservicios para automatizar procesos repetitivos y mejorar eficiencia operativa.</p>
+          </div>
+        </article>
+      </section>
+    </div>
+  </main>
+
+  <!-- FOOTER: Pie de página -->
+  <footer class="bg-slate-900 text-white mt-12">
+    <div class="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div>
+        <h4 class="text-xl font-bold">Alexander Pedroza</h4>
+        <p class="mt-3 text-sm text-slate-300">Ingeniero de Sistemas — Desarrollo web, bases de datos y cloud. Disponible para proyectos y consultoría.</p>
+      </div>
+      <div>
+        <h4 class="font-bold">Enlaces</h4>
+        <ul class="mt-3 space-y-2 text-sm text-slate-300">
+          <li><a href="index.html" class="hover:text-white">Inicio</a></li>
+          <li><a href="servicios.html" class="hover:text-white">Servicios</a></li>
+          <li><a href="portafolio.html" class="hover:text-white">Portafolio</a></li>
+          <li><a href="contacto.html" class="hover:text-white">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold">Redes sociales</h4>
+        <div class="mt-4 flex items-center space-x-4">
+          <a href="#" aria-label="GitHub" class="text-slate-300 hover:text-white"><i class="fa-brands fa-github fa-lg"></i></a>
+          <a href="#" aria-label="LinkedIn" class="text-slate-300 hover:text-white"><i class="fa-brands fa-linkedin fa-lg"></i></a>
+          <a href="#" aria-label="Twitter" class="text-slate-300 hover:text-white"><i class="fa-brands fa-twitter fa-lg"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-slate-800 py-4 text-center text-sm text-slate-400">&copy; 2026 Alexander Pedroza. Todos los derechos reservados.</div>
+  </footer>
+
+  <!-- SCRIPT: Manejo del menú móvil (común) -->
+  <script>
+    const navToggle = document.getElementById('nav-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    navToggle.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+  </script>
+
+  <!-- Script: intentar cargar imágenes reales probando varias extensiones -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const exts = ['.jpg', '.jpeg', '.png', '.webp'];
+      const imgs = document.querySelectorAll('img[data-name]');
+      imgs.forEach(img => {
+        const name = img.getAttribute('data-name');
+        const base = 'recursos/' + name;
+        let i = 0;
+        const tryNext = () => {
+          if (i >= exts.length) return; // no encontramos ninguna
+          const testSrc = base + exts[i];
+          const tester = new Image();
+          tester.onload = () => {
+            img.src = testSrc;
+          };
+          tester.onerror = () => {
+            i++; tryNext();
+          };
+          tester.src = testSrc;
+        };
+        tryNext();
+      });
+    });
+  </script>
+
+</body>
+</html>

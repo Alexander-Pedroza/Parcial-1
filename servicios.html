@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <!-- META: configuración de charset y responsive -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Servicios - Ingeniero de Sistemas</title>
+
+  <!-- CDN: Tailwind CSS v3 -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- CDN: FontAwesome v6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pc6E6Xx1YqKqvZ+g5Qk1g6r5h3QZ8V4Yx6p1h2Z9s7Q8l3W9y2K1s0H6b5N4T2M1J3G4H5F6E7D8C9B0A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+<body class="antialiased text-slate-800 bg-gray-50">
+
+  <!-- INICIO NAVBAR -->
+  <header class="sticky top-0 z-50 bg-white/70 backdrop-blur-md shadow">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <!-- Logo: AP (Alexander Pedroza) -->
+        <a href="index.html" class="flex items-center space-x-3">
+          <div class="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold">AP</div>
+          <div class="text-sm">
+            <div class="text-slate-900 font-bold">Alexander Pedroza</div>
+            <div class="text-xs text-slate-500">Ingeniero de Sistemas</div>
+          </div>
+        </a>
+
+        <!-- Botón hamburguesa para móviles -->
+        <div class="lg:hidden">
+          <button id="nav-toggle" aria-label="Abrir menú" class="p-2 rounded-md focus:outline-none focus:ring">
+            <i class="fa-solid fa-bars text-xl"></i>
+          </button>
+        </div>
+
+        <!-- Enlaces de navegación (esconde en móviles) -->
+        <nav id="nav-menu" class="hidden lg:flex lg:items-center lg:space-x-6">
+          <a href="index.html" class="text-slate-700 hover:text-blue-600">Inicio</a>
+          <a href="servicios.html" class="text-slate-700 hover:text-blue-600">Servicios</a>
+          <a href="portafolio.html" class="text-slate-700 hover:text-blue-600">Portafolio</a>
+          <a href="contacto.html" class="text-slate-700 hover:text-blue-600">Contacto</a>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Menu desplegable móvil -->
+    <div id="mobile-menu" class="lg:hidden hidden px-4 pb-4">
+      <a href="index.html" class="block py-2 text-slate-700">Inicio</a>
+      <a href="servicios.html" class="block py-2 text-slate-700">Servicios</a>
+      <a href="portafolio.html" class="block py-2 text-slate-700">Portafolio</a>
+      <a href="contacto.html" class="block py-2 text-slate-700">Contacto</a>
+    </div>
+  </header>
+  <!-- FIN NAVBAR -->
+
+  <!-- SECCIÓN PRINCIPAL: Servicios ofrecidos -->
+  <main class="py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <!-- Título de la sección con borde inferior decorativo -->
+      <header class="text-center mb-12">
+        <h2 class="text-3xl font-extrabold">Servicios</h2>
+        <div class="mt-3 mx-auto w-24 h-1 bg-blue-600 rounded"></div>
+        <p class="mt-4 text-slate-600">Servicios profesionales en desarrollo, bases de datos y arquitectura en la nube.</p>
+      </header>
+
+      <!-- Grid de servicios: 3 columnas -->
+      <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Tarjeta de servicio 1 -->
+        <article class="bg-white rounded-lg p-6 shadow">
+          <i class="fa-solid fa-laptop-code text-3xl text-orange-500"></i>
+          <h3 class="mt-4 font-semibold text-lg">Desarrollo de Software</h3>
+          <p class="mt-2 text-sm text-slate-600">Construcción de aplicaciones web y APIs con buenas prácticas y pruebas automatizadas.</p>
+        </article>
+
+        <!-- Tarjeta de servicio 2 -->
+        <article class="bg-white rounded-lg p-6 shadow">
+          <i class="fa-solid fa-database text-3xl text-indigo-600"></i>
+          <h3 class="mt-4 font-semibold text-lg">Administración de Bases de Datos</h3>
+          <p class="mt-2 text-sm text-slate-600">Diseño de modelos, optimización de consultas y administración de servidores de BD.</p>
+        </article>
+
+        <!-- Tarjeta de servicio 3 -->
+        <article class="bg-white rounded-lg p-6 shadow">
+          <i class="fa-solid fa-network-wired text-3xl text-teal-600"></i>
+          <h3 class="mt-4 font-semibold text-lg">Infraestructura y DevOps</h3>
+          <p class="mt-2 text-sm text-slate-600">CI/CD, automatización y despliegue en entornos escalables en la nube.</p>
+        </article>
+      </section>
+
+      <!-- COMPONENTE INTERACTIVO: FAQ acordeón -->
+      <section class="mt-12">
+        <h3 class="text-2xl font-bold mb-4">Preguntas Frecuentes</h3>
+
+        <!-- Acordeón: cada ítem tiene botón que alterna la respuesta -->
+        <div class="space-y-4">
+          <div class="border rounded-lg overflow-hidden">
+            <button class="w-full text-left px-6 py-4 flex justify-between items-center faq-toggle">
+              <span class="font-medium">¿Cómo gestionas los plazos de entrega?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="px-6 py-4 hidden faq-content text-slate-600">
+              Normalmente utilizo metodologías ágiles con sprints cortos y entregables iterativos para garantizar visibilidad y control de avances.
+            </div>
+          </div>
+
+          <div class="border rounded-lg overflow-hidden">
+            <button class="w-full text-left px-6 py-4 flex justify-between items-center faq-toggle">
+              <span class="font-medium">¿Ofreces soporte post-lanzamiento?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="px-6 py-4 hidden faq-content text-slate-600">
+              Sí, ofrezco paquetes de soporte y mantenimiento para corregir bugs, optimizar y agregar mejoras tras el lanzamiento.
+            </div>
+          </div>
+
+          <div class="border rounded-lg overflow-hidden">
+            <button class="w-full text-left px-6 py-4 flex justify-between items-center faq-toggle">
+              <span class="font-medium">¿Trabajas con equipos remotos?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="px-6 py-4 hidden faq-content text-slate-600">
+              Sí, tengo experiencia trabajando con equipos distribuidos usando herramientas de colaboración y control de versiones.
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- FOOTER: Pie de página -->
+  <footer class="bg-slate-900 text-white mt-12">
+    <div class="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div>
+        <h4 class="text-xl font-bold">Alexander Pedroza</h4>
+        <p class="mt-3 text-sm text-slate-300">Ingeniero de Sistemas — Desarrollo web, bases de datos y cloud. Disponible para proyectos y consultoría.</p>
+      </div>
+      <div>
+        <h4 class="font-bold">Enlaces</h4>
+        <ul class="mt-3 space-y-2 text-sm text-slate-300">
+          <li><a href="index.html" class="hover:text-white">Inicio</a></li>
+          <li><a href="servicios.html" class="hover:text-white">Servicios</a></li>
+          <li><a href="portafolio.html" class="hover:text-white">Portafolio</a></li>
+          <li><a href="contacto.html" class="hover:text-white">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold">Redes sociales</h4>
+        <div class="mt-4 flex items-center space-x-4">
+          <a href="#" aria-label="GitHub" class="text-slate-300 hover:text-white"><i class="fa-brands fa-github fa-lg"></i></a>
+          <a href="#" aria-label="LinkedIn" class="text-slate-300 hover:text-white"><i class="fa-brands fa-linkedin fa-lg"></i></a>
+          <a href="#" aria-label="Twitter" class="text-slate-300 hover:text-white"><i class="fa-brands fa-twitter fa-lg"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-slate-800 py-4 text-center text-sm text-slate-400">&copy; 2026 Alexander Pedroza. Todos los derechos reservados.</div>
+  </footer>
+
+  <!-- SCRIPTS: Manejo del menú móvil y acordeón FAQ -->
+  <script>
+    // Control del menú móvil
+    const navToggle = document.getElementById('nav-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    navToggle.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+
+    // Acordeón FAQ: seleccionamos todos los toggles
+    const faqToggles = document.querySelectorAll('.faq-toggle');
+    faqToggles.forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        // Buscamos el panel asociado (elem. siguiente) y lo mostramos/ocultamos
+        const content = toggle.nextElementSibling;
+        content.classList.toggle('hidden');
+        // Animación simple: rotar icono
+        const icon = toggle.querySelector('i');
+        icon.classList.toggle('fa-rotate-180');
+      });
+    });
+  </script>
+
+
+</body>
+</html>
